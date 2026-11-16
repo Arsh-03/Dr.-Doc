@@ -1,0 +1,48 @@
+{
+  "name": "Dr.Doc",
+  "short_name": "Dr.Doc",
+  "description": "Offline PDF and document toolkit: merge, split, convert.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#1f4fd8",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "share_target": {
+    "action": "./share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "files": [
+        {
+          "name": "files",
+          "accept": [
+            "application/pdf", ".pdf",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document", ".docx",
+            "application/msword", ".doc",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation", ".pptx",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", ".xlsx",
+            "application/vnd.ms-excel", ".xls", "text/csv", ".csv",
+            "text/plain", ".txt", "text/markdown", ".md", "text/html", ".html",
+            "image/*"
+          ]
+        }
+      ]
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"]
+      }
+    }
+  ]
+}
