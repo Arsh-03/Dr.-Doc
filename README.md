@@ -40,7 +40,7 @@ npm run android:sync   # copy the web build into the Android project
 
 ### Building the APK
 
-- **GitHub (no local setup):** push this folder to a GitHub repo. `.github/workflows/android-apk.yml` builds a debug APK on each push to `main` (or run it manually from the Actions tab); download it from the run’s *Artifacts*.
+- **GitHub (no local setup):** `.github/workflows/android-apk.yml` builds a debug APK on each push to `main` and publishes it to the **latest** release: [download Dr.Doc.apk](https://github.com/Arsh-03/Dr.-Doc/releases/download/latest/Dr.Doc.apk).
 - **Locally:** install Android Studio (JDK 21 + Android SDK 35), run `npm run android:sync`, then either `npm run android:open` and *Build › Build APK(s)*, or `cd android && gradlew assembleDebug`. The APK is at `android/app/build/outputs/apk/debug/app-debug.apk`.
 
 To install it, copy the APK to the phone and open it (allow “Install unknown apps” for your file manager when asked).
